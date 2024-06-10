@@ -32,3 +32,5 @@ const operacionesPoo = new OperacionesPoo();//Los objetos inician con minúscula
     console.log(operacionesPoo.restar());
 
 const ope2 = new OperacionesPoo();
+ope2.asignarNumero1(750);
+ope2.asignarNumero2(854);
