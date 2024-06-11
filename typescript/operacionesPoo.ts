@@ -10,27 +10,58 @@ class OperacionesPoo {//Las clases inician con mayúscula
         //se le tiene que dar un valor de tipo numérico "valor:number"
         this.numero1 = valor; //metodo que permite asignar al valor al atributo numero1
     }
-
-    public asignarNumero2(valor: number){
+    public asignarNumero2(valor: number) {
         this.numero2 = valor;//La palabra this me permite asignar valor a los atributos de esta clase, me da acceso a los private
     }
-    public sumar(): string{
+    public sumar(): string {
         this.resultado = this.numero1 + this.numero2;
         return "La suma es: " + this.resultado;
     }
-    public restar(): string{
+    public restar(): string {
         this.resultado = this.numero1 - this.numero2;
         return "La resta es: " + this.resultado;
     }
+    public multiplicar(): string{
+        this.resultado = this.numero1 * this.numero2;
+        return "La multiplicación es: " + this.resultado;
+    }
+    public dividir(): string{
+        this.resultado = this.numero1 / this.numero2;
+        return "La división es: " + this.resultado;
+    }
 }//FINALIZA CLASE
 
-//Crear un objeto de tipo OperacionesPoo = instanciar la clase OperacionesPoo
-const operacionesPoo = new OperacionesPoo();//Los objetos inician con minúscula
-    operacionesPoo.asignarNumero1(10);
-    operacionesPoo.asignarNumero2(20);
-    console.log(operacionesPoo.sumar());
-    console.log(operacionesPoo.restar());
 
-const ope2 = new OperacionesPoo();
-ope2.asignarNumero1(750);
-ope2.asignarNumero2(854);
+
+                             /*CÓMO LO VA A OPERAR*/
+
+
+//crear un objeto de tipo OperacionesPoo = instanciar la clase OperacionesPoo
+const operacionesPoo = new OperacionesPoo();
+let divDatos = document.getElementById('datos');
+
+function obtenerDatos(){
+    //asignando a los atributos del objeto los valores de los controles del formulario
+    operacionesPoo.asignarNumero1(
+        parseFloat((document.getElementById("txtNumero1") as HTMLInputElement).value)
+    );
+    operacionesPoo.asignarNumero2(
+        parseFloat((document.getElementById("txtNumero2") as HTMLInputElement).value)
+    );
+}
+function sumar(){
+    obtenerDatos();
+    divDatos.textContent = operacionesPoo.sumar();
+}
+function restar(){
+    obtenerDatos();
+    divDatos.textContent = operacionesPoo.restar();
+}
+function multiplicar(){
+    divDatos.textContent = operacionesPoo.multiplicar();
+}
+function dividir(){
+    divDatos.textContent = operacionesPoo.dividir();
+}
+//CLASES SON LOS MOLDES
+//METODOS SON ACCIONES

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Número Mayor o Menor</title>
     <link rel="stylesheet" href="css/4-mayorymenor.css">
 </head>
-
 <body>
     <div class="area">
         <ul class="circles">
@@ -21,7 +19,6 @@
             <li></li>
             <li></li>
             <li></li>
-
         </ul>
         <nav>
             <ul class="navul">
@@ -45,38 +42,31 @@
             <h1>Número Mayor y Menor</h1>
         </header>
         <p>El usuario debe ingresar el valor para encontrar el mayor y menor de tres números ingresados.</p>
-
         <br><br>
-        <span class="span">
-            <section>
-                <article>
-                    <form>
-                        <div class="inputbox">
-                            <input type="number" required>
-                            <label for="">Primer Número</label>
-                        </div>
-
-                        <div class="inputbox">
-                            <input type="number" required>
-                            <label for="">Segundo Número</label>
-                        </div>
-
-                        <div class="inputbox">
-                            <input type="number" required>
-                            <label for="">Tercer Número</label>
-                        </div>
-
-                        <div class="inputbox">
-                            <input type="number" required readonly id="totalNum" placeholder="Resultado">
-                            <label id="totalSuma"></label>
-                        </div>
-                    </form>
-                    <input type="button" value="Obtener Orden" class="submitguardar">
-
-                </article>
-            </section>
-        </span>
+        <section>
+            <article>
+                <form>
+                    <div class="inputbox">
+                        <input type="number" required id="txtNumero1" name="txtNumero1">
+                        <label for="txtNumero1">Primer Número</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="number" required id="txtNumero2" name="txtNumero2">
+                        <label for="txtNumero2">Segundo Número</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="number" required id="txtNumero3" name="txtNumero3">
+                        <label for="txtNumero3">Tercer Número</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" readonly id="resultado" name="resultado" placeholder="Resultado">
+                        <label for="resultado"></label>
+                    </div>
+                </form>
+                <button id="btnNumero" class="submitguardar">Obtener Orden</button>
+            </article>
+        </section>
     </div>
+    <script src="js/4-mayorymenor.js"></script>
 </body>
-
 </html>
