@@ -38,13 +38,13 @@ body {
     }
   }
   .letter {
-    padding: 40px;
+    padding: 30px;
     overflow: hidden;
     margin: 0px auto;
     width: 50vw;
     font-weight: 600;
     line-height: 0.8;
-    font-size: 60px;
+    font-size: 55px;
     text-align: left;
     font-size: 2.5rem;
     color: #EDEEE9;

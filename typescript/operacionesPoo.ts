@@ -21,11 +21,11 @@ class OperacionesPoo {//Las clases inician con mayúscula
         this.resultado = this.numero1 - this.numero2;
         return "La resta es: " + this.resultado;
     }
-    public multiplicar(): string{
+    public multiplicar(): string {
         this.resultado = this.numero1 * this.numero2;
         return "La multiplicación es: " + this.resultado;
     }
-    public dividir(): string{
+    public dividir(): string {
         this.resultado = this.numero1 / this.numero2;
         return "La división es: " + this.resultado;
     }
@@ -33,14 +33,14 @@ class OperacionesPoo {//Las clases inician con mayúscula
 
 
 
-                             /*CÓMO LO VA A OPERAR*/
+/*CÓMO LO VA A OPERAR*/
 
 
 //crear un objeto de tipo OperacionesPoo = instanciar la clase OperacionesPoo
 const operacionesPoo = new OperacionesPoo();
 let divDatos = document.getElementById('datos');
 
-function obtenerDatos(){
+function obtenerDatos() {
     //asignando a los atributos del objeto los valores de los controles del formulario
     operacionesPoo.asignarNumero1(
         parseFloat((document.getElementById("txtNumero1") as HTMLInputElement).value)
@@ -49,18 +49,18 @@ function obtenerDatos(){
         parseFloat((document.getElementById("txtNumero2") as HTMLInputElement).value)
     );
 }
-function sumar(){
+function sumar() {
     obtenerDatos();
     divDatos.textContent = operacionesPoo.sumar();
 }
-function restar(){
+function restar() {
     obtenerDatos();
     divDatos.textContent = operacionesPoo.restar();
 }
-function multiplicar(){
+function multiplicar() {
     divDatos.textContent = operacionesPoo.multiplicar();
 }
-function dividir(){
+function dividir() {
     divDatos.textContent = operacionesPoo.dividir();
 }
 //CLASES SON LOS MOLDES

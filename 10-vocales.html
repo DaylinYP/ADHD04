@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocales</title>
     <link rel="stylesheet" href="css/10-vocales.css">
+    <script defer src="js/10-vocales.js"></script>
 </head>
 
 <body>
@@ -46,22 +47,20 @@
                 <article>
                     <form>
                         <div class="inputbox">
-                            <input type="text" required>
-                            <label for="">Ingrese el texto</label>
+                            <input type="text" required id="txtTexto">
+                            <label for="txtTexto">Ingrese el texto</label>
                         </div>
 
                         <div class="inputbox">
-                            <input type="number" required readonly id="txtInverso"
-                                placeholder="¿Cuántas vocales hay?">
-                            <label id="txtInverso"></label>
+                            <input type="number" required readonly id="txtVocales" placeholder="¿Cuántas vocales hay?">
+                            <label for="txtVocales"></label>
                         </div>
                     </form>
-                    <input type="button" value="Cantidad de Vocales" class="submitguardar">
+                    <input type="button" value="Cantidad de Vocales" class="submitguardar" id="btnContarVocales">
 
                 </article>
             </section>
         </span>
-    </div>
     </div>
 </body>
 
